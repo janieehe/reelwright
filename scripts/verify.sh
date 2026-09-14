@@ -15,14 +15,15 @@ echo "目录：$SKILL_DIR"
 echo
 
 # [1] 核心文件
-echo "[1/4] 核心文件"
+echo "[1/4] 核心文件与脚本"
 [ -s SKILL.md ] && ok "SKILL.md" || bad "SKILL.md 缺失或为空"
 [ -s README.md ] && ok "README.md" || bad "README.md 缺失或为空"
 [ -s LICENSE ]   && ok "LICENSE"   || bad "LICENSE 缺失或为空"
+[ -s scripts/video_to_frames_transcript.sh ] && ok "scripts/video_to_frames_transcript.sh" || bad "scripts/video_to_frames_transcript.sh 缺失或为空"
 
-# [2] 参考文件（00~09）
+# [2] 参考文件（00~10）
 echo "[2/4] 参考文件"
-for i in 00 01 02 03 04 05 06 07 08 09; do
+for i in 00 01 02 03 04 05 06 07 08 09 10; do
   f="$(ls "references/${i}-"*.md 2>/dev/null | head -1)"
   if [ -n "$f" ] && [ -s "$f" ]; then
     ok "${f#references/}"
@@ -40,17 +41,17 @@ while read -r ref; do
   [ -f "$ref" ] && ok "$ref 存在" || bad "$ref 被引用但文件不存在"
 done < <(grep -oE 'references/[0-9]{2}-[^ `)]+' SKILL.md | sort -u)
 
-# [4] 工序模板 frontmatter 抽查（01-08 产出档案，须含 type；09 自由对话不产出档案）
-echo "[4/4] 工序模板 frontmatter"
+# [4] 方向模板 frontmatter 抽查（01-08、10 产出档案，须含 type；09 自由对话不产出档案）
+echo "[4/4] 方向模板 frontmatter"
 n=0
-for f in references/0[1-8]-*.md; do
+for f in references/0[1-8]-*.md references/10-*.md; do
   if grep -q '^type:' "$f"; then
     n=$((n+1))
   else
     bad "${f#references/} 缺 type 字段"
   fi
 done
-echo "  产出档案的 8 道工序（01-08）含 type 字段：${n} / 8"
+echo "  产出档案的 9 个方向（01-08、10）含 type 字段：${n} / 9"
 echo "  （09 自由对话不产出档案，无 frontmatter 属正常设计）"
 
 echo

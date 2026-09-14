@@ -9,7 +9,7 @@
 
 开旅拍店、妆造店、民宿的老板，和独立摄影师、独立妆造师，是不是都卡在同一个坎上——生意不错，就是不会做短视频。别人的客片拍得像电影，你拍了三个月粉丝还没破百。不是不想做，是不知道发什么、怎么写、怎么拍。
 
-**reelwright 就是来解决这件事的。** 它是一个叫 **灵小兔 🐰** 的短视频小助手，一只陪在旅拍店、妆造店、民宿老板，和独立摄影师、独立妆造师身边的兔子。它有九个方向，每个都能单独用，串起来就是一条从「不会拍」到「直接开拍」的线——不用懂编导，不用懂营销。
+**reelwright 就是来解决这件事的。** 它是一个叫 **灵小兔 🐰** 的短视频小助手，一只陪在旅拍店、妆造店、民宿老板，和独立摄影师、独立妆造师身边的兔子。它有十个方向，每个都能单独用，串起来就是一条从「不会拍」到「直接开拍」的线，还有个「拆解爆款」帮你先拆透对标——不用懂编导，不用懂营销。
 
 ---
 
@@ -41,7 +41,7 @@
 
 ---
 
-## 九个方向
+## 十个方向
 
 | # | 方向 | 产出文件 | 做什么 |
 |---|------|---------|--------|
@@ -54,8 +54,9 @@
 | 7 | 分镜设计 | `分镜表.md` | 脚本拆成现场可执行的镜头表 |
 | 8 | 拍摄方案 | `拍摄方案.md` | 照着就能执行的拍摄安排 |
 | 9 | 自由对话 | — | 随时陪聊、润色、灵感、答疑 |
+| 10 | 拆解爆款 | `爆款拆解.md` | 拆对标视频/账号/选题，找可复用的爆款模板 |
 
-前 4 个方向是「长期档案」，沉淀下来反复复用；5-8 是「一次拍摄」的产出；第 9 个方向兜底。
+前 4 个方向是「长期档案」，沉淀下来反复复用；5-8 是「一次拍摄」的产出；第 9 个方向兜底；第 10 个「拆解爆款」拆对标，喂给选题和脚本。
 
 ---
 
@@ -67,7 +68,7 @@
 
 > 帮我给民宿/旅拍店起个号、做一批选题、写第一条脚本。
 
-4. 顺着这九个方向走，产出会以 Markdown 文件的形式落在当前目录。
+4. 顺着这十个方向走，产出会以 Markdown 文件的形式落在当前目录。
 
 ---
 
@@ -91,21 +92,22 @@ bash scripts/verify.sh
 
 ```
 reelwright/
-├── SKILL.md              ← 灵小兔人设 + 九个方向总览 + 路由
+├── SKILL.md              ← 灵小兔人设 + 十个方向总览 + 路由
 ├── README.md             ← 本文件
 ├── LICENSE               ← MIT
 ├── scripts/
-│   └── verify.sh         ← 结构自检脚本
+│   ├── verify.sh                     ← 结构自检脚本
+│   └── video_to_frames_transcript.sh ← 本地视频抽帧+转写（可选，拆爆款用）
 ├── examples/
 │   └── 山海间旅拍/        ← 一套完整走查示例（8 份档案）
 └── references/
     ├── 00-全局规范.md     ← 提问阶梯、去 AI 味、落盘、合规
-    └── 01-商家档案.md … 09-自由对话.md
+    └── 01-商家档案.md … 10-拆解爆款.md
 ```
 
 ## 工作原理（给想二改的人）
 
-- **渐进式披露**：主 SKILL.md 只放总流程与路由，九个方向详细规范按需读取，省 token。
+- **渐进式披露**：主 SKILL.md 只放总流程与路由，十个方向详细规范按需读取，省 token。
 - **文件即档案**：所有产出都是 Markdown，没有 JSON、没有隐藏结构，上游写、下游读。
 - **说人话**：对话里只呈现成品，不暴露机器结构。
 
@@ -117,4 +119,4 @@ reelwright/
 
 ---
 
-**English:** reelwright is a Claude Code skill for travel-photography studios, styling studios, homestays, and independent photographers & stylists — nine standalone directions that chain into one line from profile to shoot plan, producing human-sounding, ready-to-shoot scripts. MIT licensed.
+**English:** reelwright is a Claude Code skill for travel-photography studios, styling studios, homestays, and independent photographers & stylists — ten standalone directions that chain from profile to shoot plan, plus a hit-breakdown tool for reverse-engineering benchmark videos and accounts, producing human-sounding, ready-to-shoot scripts. MIT licensed.
