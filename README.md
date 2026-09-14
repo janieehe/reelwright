@@ -2,13 +2,14 @@
 
 > Reels, written right. · 匠人出手，片片对味
 
-**开旅拍店、民宿、自由约拍摄影师、妆造师的老板，是不是都卡在同一个坎上——生意不错，就是不会做短视频。**
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Claude Code](https://img.shields.io/badge/Claude%20Code-Skill-8a2be2.svg)](https://claude.com/claude-code)
 
-打开抖音、小红书，别人的客片拍得像电影；你拍了三个月，粉丝还没破百。不是不想做，是不知道发什么、怎么写、怎么拍。
+**一句人话，把一家店从「不会拍」带到「直接开拍」。**
 
-**reelwright 就是来解决这件事的。**
+开旅拍店、妆造店、民宿的老板，和独立摄影师、独立妆造师，是不是都卡在同一个坎上——生意不错，就是不会做短视频。别人的客片拍得像电影，你拍了三个月粉丝还没破百。不是不想做，是不知道发什么、怎么写、怎么拍。
 
-它是一个叫 **灵小兔** 的短视频小助手，一只陪在文旅商家身边的兔子。它把「拍一条短视频」这件头疼事，拆成九道工序，你跟着走就行——不用懂编导，不用懂营销。
+**reelwright 就是来解决这件事的。** 它是一个叫 **灵小兔 🐰** 的短视频小助手，一只陪在旅拍店、妆造店、民宿老板，和独立摄影师、独立妆造师身边的兔子。它有九个方向，每个都能单独用，串起来就是一条从「不会拍」到「直接开拍」的线——不用懂编导，不用懂营销。
 
 ---
 
@@ -16,13 +17,15 @@
 
 > 帮我给一家三亚的海景民宿，起个号、做一批选题、写第一条脚本。
 
-灵小兔就顺着流水线，一步步带你走：
+灵小兔就顺着这条线带你走：
 
 **商家档案**（你是谁）→ **客群画像**（客户是谁）→ **账号定位**（抖音/小红书/视频号的人设）→ **内容矩阵**（各账号发什么）→ **选题**（拍什么）→ **脚本**（怎么写）→ **分镜**（怎么拍）→ **拍摄方案**（怎么执行）。
 
 每一步的结果都落成一个 Markdown 文件，下一步直接接着用。最后拿到的，是能直接开拍的脚本、分镜表和拍摄方案，不是 PPT 上好看的空话。
 
 ---
+
+## 为什么值得用
 
 **1. 文案真的像人说的。** 内置一整套「去 AI 味」规范，写出来的台词逐字可念。看一眼区别：
 
@@ -38,9 +41,9 @@
 
 ---
 
-## 九道工序
+## 九个方向
 
-| # | 工序 | 产出文件 | 做什么 |
+| # | 方向 | 产出文件 | 做什么 |
 |---|------|---------|--------|
 | 1 | 商家档案 | `商家档案.md` | 聊清楚「这家店是谁、卖什么」 |
 | 2 | 客群画像 | `客群画像.md` | 搞清楚「客户是谁、怎么打动」 |
@@ -52,7 +55,7 @@
 | 8 | 拍摄方案 | `拍摄方案.md` | 照着就能执行的拍摄安排 |
 | 9 | 自由对话 | — | 随时陪聊、润色、灵感、答疑 |
 
-前 4 步是「长期档案」，沉淀下来反复复用；5-8 步是「一次拍摄」的产出；第 9 步兜底。
+前 4 个方向是「长期档案」，沉淀下来反复复用；5-8 是「一次拍摄」的产出；第 9 个方向兜底。
 
 ---
 
@@ -64,7 +67,7 @@
 
 > 帮我给民宿/旅拍店起个号、做一批选题、写第一条脚本。
 
-4. 顺着九道工序走，产出会以 Markdown 文件的形式落在当前目录。
+4. 顺着这九个方向走，产出会以 Markdown 文件的形式落在当前目录。
 
 ---
 
@@ -88,7 +91,7 @@ bash scripts/verify.sh
 
 ```
 reelwright/
-├── SKILL.md              ← 灵小兔人设 + 九道工序总览 + 路由
+├── SKILL.md              ← 灵小兔人设 + 九个方向总览 + 路由
 ├── README.md             ← 本文件
 ├── LICENSE               ← MIT
 ├── scripts/
@@ -102,7 +105,7 @@ reelwright/
 
 ## 工作原理（给想二改的人）
 
-- **渐进式披露**：主 SKILL.md 只放总流程与路由，九道工序详细规范按需读取，省 token。
+- **渐进式披露**：主 SKILL.md 只放总流程与路由，九个方向详细规范按需读取，省 token。
 - **文件即档案**：所有产出都是 Markdown，没有 JSON、没有隐藏结构，上游写、下游读。
 - **说人话**：对话里只呈现成品，不暴露机器结构。
 
@@ -114,4 +117,4 @@ reelwright/
 
 ---
 
-**English:** reelwright is a Claude Code skill that turns travel & local-life merchants into content creators — a nine-stage pipeline from merchant profile to shoot plan, producing human-sounding, ready-to-shoot scripts. MIT licensed.
+**English:** reelwright is a Claude Code skill for travel-photography studios, styling studios, homestays, and independent photographers & stylists — nine standalone directions that chain into one line from profile to shoot plan, producing human-sounding, ready-to-shoot scripts. MIT licensed.
