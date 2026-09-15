@@ -11,6 +11,8 @@
 
 **reelwright 就是这套流程。** 九个方向做成可单独用、也能串成流水线的工序——第一个「拆解爆款」先拆透对标，后面八个从「商家档案」一路走到「拍摄方案」，配一个叫 **灵小兔 🐰** 的小助手带你走。内置「证据边界」「分层保留」「去 AI 味」三套方法，每步产出落成 Markdown 文件、上游喂下游，最后拿到的是能直接开拍的脚本、分镜表和拍摄方案，不是空话。
 
+> **关键词 / Keywords:** 短视频 · 短视频脚本 · 分镜 · 选题 · 自媒体 · 内容创作 · AI 提示词 ｜ short-video · video-script · storyboard · content-creation · self-media · claude-skill · ai-agent
+
 ![reelwright 九个方向流程图](assets/workflow.png)
 
 ---
